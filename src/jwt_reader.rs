@@ -115,11 +115,8 @@ fn main() {
         println!("Default JWT: {}", token_to_decode);
     }
 
-    println!("\n--- Attempting to decode JWT payload ---");
-
     match decode_jwt_payload(&token_to_decode) {
         Ok(payload) => {
-            println!("\nSuccessfully decoded JWT Payload:");
             println!("{}", payload);
         }
         Err(e) => {
